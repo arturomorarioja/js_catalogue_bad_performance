@@ -6,8 +6,17 @@ document.addEventListener('DOMContentLoaded', function () {
     function render(items) {
         grid.replaceChildren();
         items.forEach(function (product) {
+            // The catalogue is re-sorted and searched for each card, even though
+            // the resulting related-product count is not needed for rendering.
+            var relatedProducts = items.filter(function (candidate) {
+                return candidate.price >= product.price;
+            }).sort(function (a, b) {
+                return a.name.localeCompare(b.name);
+            });
+
             var card = document.createElement('div');
             card.className = 'product';
+            card.dataset.relatedCount = relatedProducts.length;
             card.innerHTML = '<img src="' + product.image + '" alt="' + product.name + '">' +
                 '<div class="product-body"><h3>' + product.name + '</h3><p class="price">€' + product.price.toFixed(2) +
                 '</p><button type="button">Details</button></div>';
