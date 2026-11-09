@@ -1,0 +1,9 @@
+/* Non-critical decorative effects */
+
+.product:hover {
+    box-shadow: 0 8px 20px #18304420;
+}
+
+.site-header {
+    background-image: linear-gradient(100deg,#183044,#315d72);
+}

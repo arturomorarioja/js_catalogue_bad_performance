@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Desk Essentials — Catalogue</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="extras.css">
+    <script src="products.js"></script>
+    <script src="details.js"></script>
+    <script src="catalogue.js"></script>
+</head>
+<body>
+    <div class="site-header"><h1>Desk Essentials</h1><p>Useful things for work and study</p></div>
+    <div class="navigation"><a href="#catalogue">Catalogue</a><a href="#about">About</a></div>
+    <div class="container">
+        <div class="intro" id="catalogue"><h2>Product catalogue</h2><p>Explore our selection of desk accessories.</p></div>
+        <div class="controls"><label for="search">Search:</label><input id="search" type="search" placeholder="Filter products"><span class="count" id="count"></span></div>
+        <div class="grid" id="products"></div>
+    </div>
+    <div class="site-footer" id="about">Demo catalogue · Web Systems Architecture</div>
+    <dialog id="product-dialog"><div id="dialog-body"></div><button class="close-button" id="close-dialog" type="button">Close</button></dialog>
+</body>
+</html>
